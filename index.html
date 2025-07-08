@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Ammar - AI & Robotics Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <meta name="description" content="Portfolio of Mohammad Ammar - Computer Engineering graduate specializing in Deep Learning, Computer Vision, and Reinforcement Learning">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Computer Vision, Robotics, Reinforcement Learning">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+        :root {
+            --primary: #0891b2;
+            --primary-dark: #0e7490;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            color: #0f172a;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .skill-logo {
+            height: 48px;
+            width: 48px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .group:hover .skill-logo {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -13px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: var(--primary);
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 2px;
+        }
+        
+        .pattern-bg {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0;
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px rgba(8, 145, 178, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="assets/i.png" alt="Description of the image" class="bg-gray-200 border-2 border-dashed rounded-xl w-10 h-10 mr-3">
+                    
+                    <a href="#home" class="text-xl font-bold text-gray-900 flex items-center">
+                        <span class="text-cyan-600">M</span>ohammad <span class="text-cyan-600 ml-1">A</span>mmar
+                    </a>
+                </div>
+                <nav class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#skills" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#experience" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#publications" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Publications</a>
+                        <a href="#awards" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Awards</a>
+                        <a href="#blogs" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                        <a href="#contact" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </nav>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                         <svg class="h-6 w-6 hidden" id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+                <a href="#skills" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Skills</a>
+                <a href="#experience" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Projects</a>
+                <a href="#publications" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Publications</a>
+                <a href="#awards" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Awards</a>
+                <a href="#education" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Education</a>
+                <a href="#contact" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center py-24 section-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="max-w-2xl">
+                    <div class="inline-block bg-cyan-100 text-cyan-800 text-sm font-medium px-4 py-1 rounded-full mb-6">
+                        Intelligence Architect
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Building Intelligent Systems with <span class="text-cyan-600">Passion</span> & Precision
+                    </h1>
+                    <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl">
+                        I'm Mohammad Ammar, a graduate student pursuing Artificial Intelligence at Khoury College of Computer Sciences, Northeastern University. I specialize in Deep Learning, Computer Vision, and Reinforcement Learning. I'm passionate about creating innovative AI solutions that solve real-world problems.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-md hover:shadow-lg glow">
+                            <span>Get in Touch</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <div class="flex items-center gap-4 mt-4 sm:mt-0">
+                            <a href="https://www.linkedin.com/in/mohammad-ammar-004792204" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-600 transition-colors p-2 rounded-full hover:bg-cyan-50">
+                                <span class="sr-only">LinkedIn</span>
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                            <a href="https://github.com/MohammadAmmargk8497" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-600 transition-colors p-2 rounded-full hover:bg-cyan-50">
+                                 <span class="sr-only">GitHub</span>
+                                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>t 
+                    </div>
+                </div>
+                <div class="hidden lg:block relative ai-robot">
+                    <!-- Working Lottie animation -->
+                    <lottie-player 
+                        src="https://lottie.host/2d091f3f-4527-4839-9b97-221fee6bcca0/M3P2C1eufV.json" 
+                        background="transparent" 
+                        speed="1" 
+                        style="width: 100%; height: 400px;" 
+                        loop 
+                        autoplay>
+                    </lottie-player>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-cyan-500 opacity-20 blur-3xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 section-fade-in">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Technologies & Skills</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Expertise in cutting-edge technologies that power intelligent systems and AI solutions</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                    <!-- Skill Items -->
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Python</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">C++</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">PyTorch</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">TensorFlow</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Keras</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="Numpy" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Numpy</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Pandas</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">OpenCV</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                         <svg class="skill-logo" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M72.4 128H55.6L0 90.5V37.5L55.6 0h16.9l55.5 37.5v53zm-15-112.3L15.6 42.9v42.2l41.8 27.2 41.8-27.2V42.9L57.4 15.7z" fill="#000"/><path d="M84.2 101.8H98L64 78.5 30 101.8h13.8L64 89.2l20.2 12.6zM64 67.5L30 44.2h13.8L64 55.5l20.2-11.3H98L64 67.5z" fill="#000"/></svg>
+                        <p class="font-semibold text-gray-700">ROS</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Git</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">VS Code</p>
+                    </div>
+                    <div class="group flex flex-col items-center justify-center space-y-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-logo" />
+                        <p class="font-semibold text-gray-700">Linux</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-white section-fade-in pattern-bg">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Career Journey</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Professional milestones and impactful contributions in AI and robotics</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative border-l-2 border-gray-200 pl-8 md:pl-12 space-y-16">
+                        <!-- Timeline Item -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <p class="text-sm text-gray-500 mb-1">2023 - 2024</p>
+                            <h3 class="text-xl font-bold text-gray-900">Chairperson, MTS-AUV Club ZHCET</h3>
+                            <p class="mt-2 text-gray-600">Leading club activities, directing research, guiding committee meetings, and contributing to the computer team's development work.</p>
+                            <div class="mt-3 flex flex-wrap">
+                                <span class="tech-badge">Leadership</span>
+                                <span class="tech-badge">Research</span>
+                                <span class="tech-badge">Team Management</span>
+                            </div>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <p class="text-sm text-gray-500 mb-1">2023 - 2024</p>
+                            <h3 class="text-xl font-bold text-gray-900">Summer Research Intern, Texas A&M University</h3>
+                            <p class="mt-2 text-gray-600">Researched cybersecurity vulnerabilities in maritime assets and analyzed their potential impact on human safety.</p>
+                            <div class="mt-3 flex flex-wrap">
+                                <span class="tech-badge">Cybersecurity</span>
+                                <span class="tech-badge">Research</span>
+                                <span class="tech-badge">Analysis</span>
+                            </div>
+                        </div>
+                        <!-- Timeline Item -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <p class="text-sm text-gray-500 mb-1">2022 - 2023</p>
+                            <h3 class="text-xl font-bold text-gray-900">AI/ML Lead, Google Developer Student Clubs ZHCET</h3>
+                            <p class="mt-2 text-gray-600">Organized and led webinars, hands-on workshops, and tech talks to promote awareness of modern machine learning models and methods.</p>
+                            <div class="mt-3 flex flex-wrap">
+                                <span class="tech-badge">Teaching</span>
+                                <span class="tech-badge">Workshops</span>
+                                <span class="tech-badge">Community</span>
+                            </div>
+                        </div>
+                         <!-- Timeline Item -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <p class="text-sm text-gray-500 mb-1">2022 - 2023</p>
+                            <h3 class="text-xl font-bold text-gray-900">Computer Team Member, MTS-AUV Club ZHCET</h3>
+                            <p class="mt-2 text-gray-600">Responsible for AUV vision code testing, ROV joystick control and depth hold implementation, dataset development, and conducting workshops.</p>
+                            <div class="mt-3 flex flex-wrap">
+                                <span class="tech-badge">Computer Vision</span>
+                                <span class="tech-badge">Robotics</span>
+                                <span class="tech-badge">Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 section-fade-in">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Innovative solutions showcasing expertise in AI, computer vision, and robotics</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">ROUV Software Suite</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Developed a complete software stack for a Remotely Operated Underwater Vehicle, including the user interface, control algorithms, and hardware interfaces.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">ROS</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Robotics</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">Singapore AUV Competition 2022</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Contributed to the computer team by testing the vision system of the AUV and developing a custom dataset for various vision tasks.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Computer Vision</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">OpenCV</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">Agar.io Inspired MARL Simulation</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Designed a multi-agent environment in Pygame and implemented PPO agents capable of learning complex competitive and collaborative strategies.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Reinforcement Learning</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">PPO</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">Plant Disease Classification App</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Built a web application that utilizes a ResNet50 model to classify 38 different types of plant diseases from images.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Deep Learning</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Web App</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">Nuclei Detection with U-Net</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Implemented a U-Net architecture for semantic segmentation of cell nuclei in medical images, trained on the 2018 Data Science Bowl dataset.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Semantic Segmentation</span>
+                            <span class="tech-badge">U-Net</span>
+                            <span class="tech-badge">Medical Imaging</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 mb-4"></div>
+                        <h3 class="text-xl font-bold text-gray-900">Neural Network from Scratch</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Created a shallow neural network using only Numpy to identify handwritten digits, trained on the MNIST dataset.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Neural Networks</span>
+                            <span class="tech-badge">Numpy</span>
+                            <span class="tech-badge">ML Fundamentals</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                View Project
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-24 bg-white section-fade-in pattern-bg">
+             <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Research & Publications</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Contributions to the scientific community</p>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="card-hover bg-white p-6 rounded-lg border border-gray-200">
+                        <p class="text-gray-600">J. Hu, M. Ammar, B. Zahid Hussain, J. Kim, I. Khan, <strong class="text-gray-800 font-semibold">"Reinforcement Learning Driven Integrated Detection and Mitigation of UAV GPS Spoofing Attacks"</strong>. In: IEEE Internet of Things Journal.</p>
+                        <div class="mt-3">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11032088" class="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center">
+                                Read Publication
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="card-hover bg-white p-6 rounded-lg border border-gray-200">
+                        <p class="text-gray-600">D. Singh, M. Ammar, K. Varshney and Y. U. Khan, <strong class="text-gray-800 font-semibold">"Optical Coherence Tomography Image Classification using Lightweight Hybrid Transformers"</strong>. In: 2023 International Conference on Recent Advances in Electrical, Electronics & Digital Healthcare Technologies.</p>
+                        <div class="mt-3">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10151279" class="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center">
+                                Read Publication
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="card-hover bg-white p-6 rounded-lg border border-gray-200">
+                        <p class="text-gray-600">F. Moreh, Y. Hasan, B. Zahid Hussain, M. Ammar, S. Tomforde, <strong class="text-gray-800 font-semibold">"MicroCrackAttentionNeXt: Advancing Microcrack Detection in Wave Field Analysis Using Deep Neural Networks through Feature Visualization"</strong> In: Sensors MDPI.</p>
+                        <div class="mt-3">
+                            <a href="https://www.mdpi.com/1424-8220/25/7/2107" class="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center">
+                                Read Publication
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="card-hover bg-white p-6 rounded-lg border border-gray-200">
+                        <p class="text-gray-600">F. Moreh, Y. Hasan, B. Zahid Hussain, M. Ammar, S. Tomforde, <strong class="text-gray-800 font-semibold">"Deep Learning for Micro-Scale Crack Detection on Imbalanced Datasets Using Key Point Localization"</strong>.</p>
+                        <div class="mt-3">
+                            <a href="https://arxiv.org/pdf/2411.10389" class="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center">
+                                Read Publication
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                     <div class="card-hover bg-white p-6 rounded-lg border border-gray-200">
+                        <p class="text-gray-600">M. Ammar, I.A Khan, <strong class="text-gray-800 font-semibold">"Cyber Attacks on Maritime Assets and their Impacts on Health and Safety Aboard: A Holistic View"</strong>.</p>
+                        <div class="mt-3">
+                            <a href="https://arxiv.org/abs/2407.08406" class="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center">
+                                Read Publication
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Awards & Learning Section -->
+        <section id="awards" class="py-24 section-fade-in">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-center text-gray-900 mb-10">Awards & Recognition</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9a9.75 9.75 0 011.056-4.335A3.75 3.75 0 018.25 12.75a3.75 3.75 0 01-1.056-1.665A9.75 9.75 0 017.5 6.75h9a9.75 9.75 0 01-1.056 4.335A3.75 3.75 0 0115.75 12.75a3.75 3.75 0 011.056 1.665A9.75 9.75 0 0116.5 18.75z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15.75l-2.25-2.25M12 15.75l2.25-2.25M12 15.75v-3M12 9.75l-2.25 2.25M12 9.75l2.25 2.25" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Sir Syed Global Scholarship Award</h4>
+                                <p class="text-gray-600 mt-1">Prestigious scholarship recipient in 2023.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9a9.75 9.75 0 011.056-4.335A3.75 3.75 0 018.25 12.75a3.75 3.75 0 01-1.056-1.665A9.75 9.75 0 017.5 6.75h9a9.75 9.75 0 01-1.056 4.335A3.75 3.75 0 0115.75 12.75a3.75 3.75 0 011.056 1.665A9.75 9.75 0 0116.5 18.75z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 15.75l-2.25-2.25M12 15.75l2.25-2.25M12 15.75v-3M12 9.75l-2.25 2.25M12 9.75l2.25 2.25" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Best Paper Award</h4>
+                                <p class="text-gray-600 mt-1">Awarded at REEDCON 2023 for research on Lightweight Hybrid Transformers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-center text-gray-900 mb-10">Continuous Learning</h3>
+                     <div class="space-y-6">
+                        <div class="flex items-start gap-4 bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688 0-1.25-.562-1.25-1.25s.562-1.25 1.25-1.25 1.25.562 1.25 1.25-.562 1.25-1.25 1.25z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-4.144-3.356-7.5-7.5-7.5s-7.5 3.356-7.5 7.5c0 2.838 1.575 5.313 3.875 6.613V21l3.625-2.25c.338.025.675.038 1.013.038s.675-.013 1.013-.038L15.625 21v-2.388A7.463 7.463 0 0019.5 12z" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">Workshop Facilitator: Deep Dive into AI</h4>
+                                <p class="text-gray-600 mt-1">Conducted a 3-day workshop on deep learning fundamentals for 60 participants.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white p-6 rounded-xl border border-gray-200 card-hover">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-violet-100 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-violet-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">MOOCs & Certifications</h4>
+                                <p class="text-gray-600 mt-1">Completed courses in AI (IBM), Python (Kaggle), Machine Learning (Kaggle), C++, and Deep Learning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+       <!-- Blog Section -->
+        <section id="blogs" class="py-24 bg-white section-fade-in">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Blogs and Articles</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Sharing insights on AI and Life</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Card 1 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <img src="assets/Grad.jpeg" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900">Grad School 101</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">Charting a path for Graduate Studies from the very start of your Undergrad. This blog covers the nuts and bolts of graduate school application; strategies from the very beginning of your undergraduate journey through to the final submission.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">Life</span>
+                            <span class="tech-badge">Studies</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://immediate-flannel-219.notion.site/Grad-School-101-20172718e4cb80b8acf7cb3bdc9bca6b" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Read Article
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card 2 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <img src="assets/Lora.jpeg" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900">Finetune with LoRA</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">How do you finetune LLMs for a fraction of cost -- A practical guide.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">LLMs</span>
+                            <span class="tech-badge">Deep Learning</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://www.notion.so/LoRA-Low-Rank-Adaptation-1f772718e4cb806ab86afe605d05ae4a" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Read Article
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card 3 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group">
+                        <img src="assets/woodcuts_2.jpg" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900">PPO for Dummies</h3>
+                        <p class="text-gray-600 mt-3 flex-grow">An ice breaker for PPO and RL in general.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">RL</span>
+                            <span class="tech-badge">AI Systems</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://www.notion.so/PPO-Explained-by-Caveman-1eb1795c55b880ec90b6c754db31a84f" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Read Article
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <a href="YOUR_NOTION_BLOG_HOME" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-cyan-600 font-semibold py-3 px-6 rounded-lg border border-cyan-600 hover:bg-cyan-50 transition-all">
+                        <span>View All Blog Posts</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 text-center section-fade-in">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Let's Build Something Great</h2>
+                <p class="text-gray-600 mb-8 mx-auto">I'm actively seeking new opportunities and collaborations in AI and robotics. If you have a project in mind or just want to connect, I'd love to hear from you.</p>
+                <a href="mailto:ammargk8497@gmail.com" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition-all transform hover:scale-105 shadow-md hover:shadow-lg glow">
+                    Email Me
+                </a>
+                <div class="mt-10 text-gray-500">
+                    <p>(+91) 9084584100</p>
+                    <p class="mt-2">Aligarh, Uttar Pradesh, India</p>
+                </div>
+                <div class="mt-12 flex justify-center gap-6">
+                    <a href="https://www.linkedin.com/in/mohammad-ammar-004792204" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-600 transition-colors p-2 rounded-full hover:bg-cyan-50">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/MohammadAmmargk8497" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-cyan-600 transition-colors p-2 rounded-full hover:bg-cyan-50">
+                         <span class="sr-only">GitHub</span>
+                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-cyan-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2024 Mohammad Ammar. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Crafted with passion for AI and innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && 
+                !mobileMenuButton.contains(e.target) && 
+                !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                menuOpenIcon.classList.remove('hidden');
+                menuCloseIcon.classList.add('hidden');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const sections = document.querySelectorAll('.section-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Scroll to top button
+        const scrollTopButton = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.remove('opacity-0');
+                scrollTopButton.classList.add('opacity-100');
+            } else {
+                scrollTopButton.classList.remove('opacity-100');
+                scrollTopButton.classList.add('opacity-0');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
