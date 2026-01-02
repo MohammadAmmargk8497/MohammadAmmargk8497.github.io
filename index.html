@@ -310,6 +310,8 @@
                         <a href="#projects" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
                         <a href="#publications" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Publications</a>
                         <a href="#awards" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Awards</a>
+                        <a href="#resume" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Resume</a>
+
                         <a href="#blogs" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
                         <a href="#contact" class="nav-link text-gray-500 hover:text-cyan-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
                         
@@ -354,6 +356,7 @@
                 <a href="#projects" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Projects</a>
                 <a href="#publications" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Publications</a>
                 <a href="#awards" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Awards</a>
+                <a href="#resume" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Resume</a>
                 <a href="#education" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Education</a>
                 <a href="#contact" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition-colors">Contact</a>
             </div>
@@ -641,6 +644,24 @@
                             </a>
                         </div>
                     </div>
+                     <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group transition-colors duration-300">
+                        <img src="assets/MARL.jpeg" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900 transition-colors duration-300">Multiagent Reinforcement Learning Aerial Dogfight</h3>
+                        <p class="text-gray-600 mt-3 flex-grow transition-colors duration-300">Developed a scalable multiagent reinforcement learning based aerial dogfighting simulation. Trained AI agents to perform complex aerial combat maneuvers and achieve higher-level objectives in dogfighting scenarios.</p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge">MARL</span>
+                            <span class="tech-badge">Scalable RL</span>
+                            <span class="tech-badge">Simulation</span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://github.com/MohammadAmmargk8497/NN_Scratch#" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                🔒
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -836,6 +857,165 @@
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resume PDF Preview Section -->
+        <section id="resume" class="py-24 bg-white section-fade-in transition-colors duration-300">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 transition-colors duration-300">Resume</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto transition-colors duration-300">A detailed overview of my education, experience, and skills</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <!-- PDF Preview Container -->
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden transition-colors duration-300">
+                        <!-- PDF Viewer -->
+                        <div class="h-[600px] overflow-hidden relative">
+                            <!-- PDF Embed with scrollbar -->
+                            <div class="h-full overflow-y-auto bg-gray-50">
+                                <embed 
+                                    src="assets/resume-shorter.pdf" 
+                                    type="application/pdf" 
+                                    width="100%" 
+                                    height="100%"
+                                    class="min-h-full"
+                                >
+                                <!-- Fallback message if PDF doesn't load -->
+                                <div id="pdf-fallback" class="hidden p-8 text-center">
+                                    <div class="text-gray-500 mb-4">
+                                        <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                        <p class="mb-4">Unable to load PDF preview. You can download the resume instead.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Custom scroll indicator -->
+                            <div class="absolute right-2 top-1/2 transform -translate-y-1/2 hidden md:block">
+                                <div class="flex flex-col items-center">
+                                    <svg class="w-6 h-6 text-cyan-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                    <span class="text-xs text-gray-500 mt-2">Scroll</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Download Button -->
+                        <div class="p-6 bg-gray-50 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4 transition-colors duration-300">
+                            <div>
+                                <p class="text-sm text-gray-600 transition-colors duration-300">
+                                    <span class="font-semibold">File:</span> Mohammad_Ammar_Resume.pdf
+                                </p>
+                                <p class="text-sm text-gray-600 mt-1 transition-colors duration-300">
+                                    <span class="font-semibold">Last updated:</span> January 2026
+                                </p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Download PDF
+                                </a>
+                                <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center gap-2 bg-white border border-cyan-600 text-cyan-600 hover:bg-cyan-50 font-semibold py-3 px-6 rounded-lg transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                    </svg>
+                                    Open in New Tab
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tips/Instructions -->
+                    <div class="mt-8 p-4 bg-cyan-50 rounded-lg border border-cyan-200 transition-colors duration-300">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-sm text-cyan-800 font-medium transition-colors duration-300">Quick Tips:</p>
+                                <ul class="text-sm text-cyan-700 mt-1 space-y-1 transition-colors duration-300">
+                                    <li>• Scroll within the PDF viewer to navigate through the resume</li>
+                                    <li>• Use the download button to save a copy</li>
+                                    <li>• Click "Open in New Tab" for a full-screen view</li>
+                                    <li>• For best printing results, download the PDF first</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Me -->
+        <section id="blogs" class="py-24 bg-white section-fade-in transition-colors duration-300">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4 transition-colors duration-300">About Me</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto transition-colors duration-300">Get to know me</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Card 1 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group transition-colors duration-300">
+                        <img src="" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900 transition-colors duration-300">Elevator Pitch</h3>
+                        <p class="text-gray-600 mt-3 flex-grow transition-colors duration-300"></p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge"></span>
+                            <span class="tech-badge"></span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://northeastern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=ea8156a2-9712-4667-9389-b3ae011de832&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Watch Video
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card 2 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group transition-colors duration-300">
+                        <img src="" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900 transition-colors duration-300">Tell Me About Yourself</h3>
+                        <p class="text-gray-600 mt-3 flex-grow transition-colors duration-300"></p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge"></span>
+                            <span class="tech-badge"></span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8c87291-e727-4b40-a439-b3af014babbf" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Watch Video
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card 3 -->
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200 flex flex-col group transition-colors duration-300">
+                        <img src="" alt="Description of the image" class="rounded-xl w-full h-48 mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-900 transition-colors duration-300">Job Hunt Strategy</h3>
+                        <p class="text-gray-600 mt-3 flex-grow transition-colors duration-300"></p>
+                        <div class="mt-4 flex flex-wrap">
+                            <span class="tech-badge"></span>
+                            <span class="tech-badge"></span>
+                        </div>
+                        <div class="mt-6">
+                            <a href="https://drive.google.com/file/d/1Wq9bsHg6uODy0kI0y-mvLIXmkITdU2Ex/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-cyan-600 hover:text-cyan-700 font-medium flex items-center">
+                                Show
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1092,6 +1272,26 @@
         // Add event listeners to both toggle buttons
         themeToggle.addEventListener('click', toggleTheme);
         themeToggleMobile.addEventListener('click', toggleTheme);
+        // Check if PDF loaded successfully
+        document.addEventListener('DOMContentLoaded', function() {
+            const pdfEmbed = document.querySelector('embed[type="application/pdf"]');
+            const pdfFallback = document.getElementById('pdf-fallback');
+            
+            if (pdfEmbed) {
+                pdfEmbed.onerror = function() {
+                    pdfFallback.classList.remove('hidden');
+                    pdfEmbed.style.display = 'none';
+                };
+                
+                // Also check after a delay
+                setTimeout(function() {
+                    if (pdfEmbed.offsetHeight === 0) {
+                        pdfFallback.classList.remove('hidden');
+                        pdfEmbed.style.display = 'none';
+                    }
+                }, 2000);
+            }
+        });
     </script>
 
 </body>
